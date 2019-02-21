@@ -1,2 +1,3 @@
 # rosalind
-Solution to Rosalind problem sets. [Link](http://rosalind.info/problems/list-view/)
+Solution to Rosalind problem sets. 
+[Rosalind](http://rosalind.info/problems/list-view/)
