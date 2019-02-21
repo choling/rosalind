@@ -15,4 +15,3 @@ while (count < n):
     
 print (adults + children)
 
-#print("\n---\n")
