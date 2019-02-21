@@ -8,9 +8,9 @@ length = 0
 seq = {}
 
 for rec in seq_all:
-     #print rec.id, rec.seq[0]
-	  length = len(rec.seq)
-	  seq[rec.id] = rec.seq
+	#print rec.id, rec.seq[0]
+	length = len(rec.seq)
+	seq[rec.id] = rec.seq
 
 A = []
 C = []
@@ -20,14 +20,12 @@ consensus_seq = ''
 
 for i in range(length):
 	lines = ''
-	number_seq += 1
 	for k in seq.keys():
 		lines += seq[k][i]
 	A.append(lines.count('A'))
 	C.append(lines.count('C'))
 	G.append(lines.count('G'))
 	T.append(lines.count('T'))
-	seq_count += 1
 	counts = Counter(lines)
 	consensus_seq += counts.most_common()[0][0]
 
