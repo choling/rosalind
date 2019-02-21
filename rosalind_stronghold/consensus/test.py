@@ -12,9 +12,6 @@ for rec in seq_all:
 	  length = len(rec.seq)
 	  seq[rec.id] = rec.seq
 
-
-
-
 A = []
 C = []
 G = []
@@ -36,4 +33,4 @@ for i in range(length):
 
 print (consensus_seq)
 print ('\n'.join(['A:\t'+'\t'.join(map(str,A)), 'C:\t'+'\t'.join(map(str,C)),'G:\t'+'\t'.join(map(str,G)), 'T:\t'+'\t'.join(map(str,T))]))
-#http://www.biotrainee.com/thread-370-1-1.html
+
