@@ -12,18 +12,9 @@ for rec in seq_all:
 	  length = len(rec.seq)
 	  seq[rec.id] = rec.seq
 
-#sequences = []
-#for rec in seq_all:
-#	length = len(rec.seq)
-#	print rec.seq
-#	sequences.append(rec.seq)
-#print sequences
-#print length
 
-#for k, v in seq.items():
-#	print k,v
-seq_count = 0
-number_seq = 0
+
+
 A = []
 C = []
 G = []
@@ -43,7 +34,6 @@ for i in range(length):
 	counts = Counter(lines)
 	consensus_seq += counts.most_common()[0][0]
 
-#print (consensus_seq)
-#print ('\n'.join(['A:\t'+'\t'.join(map(str,A)), 'C:\t'+'\t'.join(map(str,C)),'G:\t'+'\t'.join(map(str,G)), 'T:\t'+'\t'.join(map(str,T))]))
-print(seq_count, number_seq)
+print (consensus_seq)
+print ('\n'.join(['A:\t'+'\t'.join(map(str,A)), 'C:\t'+'\t'.join(map(str,C)),'G:\t'+'\t'.join(map(str,G)), 'T:\t'+'\t'.join(map(str,T))]))
 #http://www.biotrainee.com/thread-370-1-1.html
