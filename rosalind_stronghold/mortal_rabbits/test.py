@@ -14,7 +14,6 @@ while months < n:
     elif months == m or count == m + 1:                                        
         bunnies.append(bunnies[-2] + bunnies[-1] - 1)                          
     else:                                                                      
-        bunnies.append(bunnies[-2] + bunnies[-1] - bunnies[-(                  
-            m + 1)])                                                           
+        bunnies.append(bunnies[-2] + bunnies[-1] - bunnies[-(m + 1)])                                                           
     months += 1                                                                
 print(bunnies[-1]) 
