@@ -1,6 +1,9 @@
 from Bio import SeqIO
+import sys
 
-seq = SeqIO.parse('rosalind_grph.txt','fasta')
+file = sys.argv[-1]
+
+seq = SeqIO.parse(file,'fasta')
 
 data = {}
 
