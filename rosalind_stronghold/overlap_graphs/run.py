@@ -1,7 +1,7 @@
 from Bio import SeqIO
 import sys
 
-file = sys.argv[-1]
+file = sys.argv[1]
 
 seq = SeqIO.parse(file,'fasta')
 
