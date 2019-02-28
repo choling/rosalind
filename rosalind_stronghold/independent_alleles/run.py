@@ -1,8 +1,22 @@
 import sys
 import math
 
-k_generation = int(input("K =\n"))
-n_organism = int(input("N =\n"))
+file = open(sys.argv[1])
+f = file.readline().rstrip()
+
+data = []
+for i in f:
+	data.append(i)
+
+#print(type(data[2]))
+
+k_generation = int(data[0])
+n_organism = int(data[2])
+
+print(type(k_generation))
+
+#k_generation = int(input("K =\n"))
+#n_organism = int(input("N =\n"))
 
 population = 2**k_generation
 
