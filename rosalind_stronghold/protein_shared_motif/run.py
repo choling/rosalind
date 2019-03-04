@@ -9,16 +9,13 @@ file = open(sys.argv[1])
 protein = {}
 
 for lines in file:
-	ptn_id = lines.strip()
+	ptn_id = lines.strip().split('_')[0]
 	url = 'http://www.uniprot.org/uniprot/{0}.fasta'.format(ptn_id)
 	file = urllib.urlopen(url)
 	seq = SeqIO.parse(file,'fasta')
 	for line in seq:
-#		print(line.id)
-#		print(line.seq)
 		identity = line.id.split('|')[1]
 		protein[identity] = line.seq
-#print(protein)
 		
 #motif = re.compile(r'(?=(N[^P][ST][^P]))')
 
@@ -34,9 +31,10 @@ for name, seq in protein.items():
 			break
 		elif re.match(motif, a[index:]) != None:
 			out.append(index+1)
-	if out != []:
+	if out != []: #do not print empty list
 		print(name)
 		print(' '.join([ str(i) for i in out]))
+	
 
 
 
