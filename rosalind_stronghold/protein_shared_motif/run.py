@@ -16,15 +16,31 @@ for lines in file:
 	for line in seq:
 #		print(line.id)
 #		print(line.seq)
-		protein[line.id] = line.seq
+		identity = line.id.split('|')[1]
+		protein[identity] = line.seq
 #print(protein)
 		
-motif = re.compile(r'(?=(N[^P][ST][^P]))')
-
+#motif = re.compile(r'(?=(N[^P][ST][^P]))')
 
 
 for name, seq in protein.items():
+	motif = re.compile(r'(?=(N[^P][ST][^P]))')
+	index = 0
+	out = []
 	a = str(seq)
-	print(name)
-	for m in motif.finditer(a):
-		print (m.start()+1)
+	while (index <len(a)):
+		index += 1
+		if re.search(motif, a[index:]) == None:
+			break
+		elif re.match(motif, a[index:]) != None:
+			out.append(index+1)
+	if out != []:
+		print(name)
+		print(' '.join([ str(i) for i in out]))
+
+
+
+#	a = str(seq)
+#	print(name, a)
+#	for m in motif.finditer(a):
+#		print (m.start()+1)
