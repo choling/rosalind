@@ -21,7 +21,7 @@ for lines in file:
 
 
 for name, seq in protein.items():
-	motif = re.compile(r'(?=(N[^P][ST][^P]))')
+	motif = re.compile('N(?=[^P][ST][^P])')
 	index = 0
 	out = []
 	a = str(seq)
