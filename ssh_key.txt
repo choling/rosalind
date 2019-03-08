@@ -1,0 +1,20 @@
+setting remote access control
+
+
+#1.generate ssh key at either client or server side
+ssh-keygen
+
+#2.input passphase
+hakingwong307
+
+eg. log in as now:
+ssh kencho@192.168.0.175
+
+#3.copy the generated ssh key to the side you wanted to connect
+ssh-copy-id username@server
+
+#4.turn on ssh-agent, that can automatically input ssh-key
+ssh-agent
+
+#5.add ssh key to the agent
+ssh add
