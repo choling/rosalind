@@ -25,7 +25,7 @@ for name, seq in protein.items():
 	index = 0
 	out = []
 	a = str(seq)
-	while (index <len(a)):
+	while (index <len(a))
 		index += 1
 		if re.search(motif, a[index:]) == None:
 			break
